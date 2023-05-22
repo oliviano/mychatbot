@@ -35,7 +35,7 @@ if __name__ == '__main__':
     gdoc_ids = ['1UuCLbWjE9nB0MQDd1Gk9DjN74Pny6Zwjp1W83q-CLiw']
     loader = GoogleDocsReader()
     documents = loader.load_data(document_ids=gdoc_ids)
-    index = GPTSimpleVectorIndex(documents)
+    index = GPTSimpleVectorIndex.from_documents(documents)
 
     while True:
         prompt = input("Type prompt...")
